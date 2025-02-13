@@ -18,6 +18,7 @@ fn main() {
         // when key is released
         if !pressed.contains(target) && is_pressed {
             is_pressed = false;
+            // TODO: check if the capslock state is on, then turn it off
             enigo.key(Key::CapsLock, enigo::Direction::Release).unwrap();
         }
     }
